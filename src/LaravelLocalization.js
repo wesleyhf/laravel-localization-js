@@ -12,10 +12,15 @@ class LaravelLocalization {
 
         return translation;
     }
-
-    __(...args) {
-        return this.trans(...args);
-    }
 }
 
-export default LaravelLocalization;
+const createLaravelLocalization = (localizations) => {
+    const Localization = new LaravelLocalization(localizations);
+
+    return Localization.trans.bind(Localization);
+}
+
+export {
+    LaravelLocalization as default,
+    createLaravelLocalization,
+};

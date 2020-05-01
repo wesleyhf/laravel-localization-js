@@ -1,13 +1,10 @@
-import LaravelLocalization from '../../src/LaravelLocalization';
+import { createLaravelLocalization } from '../../src/LaravelLocalization';
 
-const localizations = {
+const __ = createLaravelLocalization({
     'My name is Wesley': 'Meu nome é wesley',
     'My name is :name': 'Meu nome é :name',
     'Hello :firstName, I am :secondName': 'Olá :firstName, I am :secondName',
-};
-
-const Localization = new LaravelLocalization(localizations);
-const __ = Localization.__.bind(Localization);
+});
 
 describe('LaravelLocalization', () => {
     test('should handle undefined lang key', () => {
