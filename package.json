@@ -33,10 +33,10 @@
   "scripts": {
     "build": "webpack",
     "lint": "eslint src tests",
-    "lint:fix": "yarn run lint --fix",
+    "lint:fix": "npm run lint --fix",
     "test": "jest",
     "test:watch": "jest --watch",
-    "prepublish": "yarn run build"
+    "prepublish": "npm run build"
   },
   "jest": {
     "verbose": true,
