@@ -1,7 +1,7 @@
 import { createLaravelLocalization } from '../../src/LaravelLocalization';
 
 const __ = createLaravelLocalization({
-    'My name is Wesley': 'Meu nome é wesley',
+    'My name is Wesley': 'Meu nome é Wesley',
     'My name is :name': 'Meu nome é :name',
     'Hello :firstName, I am :secondName': 'Olá :firstName, I am :secondName',
 });
@@ -14,7 +14,7 @@ describe('LaravelLocalization', () => {
 
     test('should handle defined lang key', () => {
         const text = __('My name is Wesley');
-        expect(text).toBe('Meu nome é wesley');
+        expect(text).toBe('Meu nome é Wesley');
     });
 
     test('should replace parameter on undefined lang key', () => {
