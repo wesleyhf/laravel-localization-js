@@ -1,4 +1,4 @@
-class LaravelLocalization {
+export default class LaravelLocalization {
     constructor(translations) {
         this.translations = translations;
     }
@@ -14,13 +14,8 @@ class LaravelLocalization {
     }
 }
 
-const createLaravelLocalization = (localizations) => {
+export function createLaravelLocalization(localizations) {
     const Localization = new LaravelLocalization(localizations);
 
     return Localization.trans.bind(Localization);
 }
-
-export {
-    LaravelLocalization as default,
-    createLaravelLocalization,
-};

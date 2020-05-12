@@ -2,7 +2,11 @@
   "name": "laravel-localization-js",
   "version": "0.0.1",
   "description": "Easy way to handle Laravel's lang.json in Javascript",
+  "source": "src/LaravelLocalization.js",
   "main": "dist/LaravelLocalization.js",
+  "umd:main": "dist/LaravelLocalization.umd.js",
+  "unpkg": "dist/LaravelLocalization.umd.js",
+  "module": "dist/LaravelLocalization.modern.js",
   "files": [
     "dist"
   ],
@@ -20,23 +24,18 @@
   "author": "Wesley Francisco (@wesleyhf)",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
-    "babel-jest": "^25.5.1",
-    "babel-loader": "^8.1.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "jest": "^25.5.3",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "eslint": "^7.0.0",
+    "jest": "^26.0.1",
+    "microbundle": "^0.12.0"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "microbundle --name LaravelLocalization --format modern,cjs,umd",
     "lint": "eslint src tests",
     "lint:fix": "npm run lint --fix",
     "test": "jest",
     "test:watch": "jest --watch",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "jest": {
     "verbose": true,
