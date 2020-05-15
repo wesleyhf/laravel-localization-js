@@ -1,6 +1,6 @@
 {
-  "name": "laravel-localization-js",
-  "version": "0.0.1",
+  "name": "@wesleyhf/laravel-localization-js",
+  "version": "0.0.2",
   "description": "Easy way to handle Laravel's lang.json in Javascript",
   "source": "src/LaravelLocalization.js",
   "main": "dist/LaravelLocalization.js",
