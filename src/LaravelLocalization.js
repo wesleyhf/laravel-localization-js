@@ -3,12 +3,13 @@ export default class LaravelLocalization {
         this.translations = translations;
     }
 
-    trans(key, replaces = {}) {
+    trans(key, parameters = {}) {
         let translation = this.translations[key] || key;
 
-        for (const key in replaces) {
-            translation = translation.replace(`:${key}`, replaces[key]);
-        }
+        Object.entries(parameters)
+            .forEach(([parameter, value]) => {
+                translation = translation.replace(`:${parameter}`, value);
+            });
 
         return translation;
     }
