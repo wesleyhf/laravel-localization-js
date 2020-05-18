@@ -1,5 +1,7 @@
 # laravel-localization-js
 
+![CI](https://github.com/wesleyhf/laravel-localization-js/workflows/CI/badge.svg?branch=master)
+
 Easy way to handle Laravel's lang.json in Javascript. :earth_americas:
 
 Inspired by [Ziggy](https://github.com/tightenco/ziggy) and based on Laravel way to [Retrieving Translation Strings](https://laravel.com/docs/7.x/localization#retrieving-translation-strings).
